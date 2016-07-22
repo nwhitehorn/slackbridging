@@ -110,7 +110,6 @@ local function handle_post(event, path)
 	module:log("debug", "message to %s from %s", bare_room, sender);
 	module:log("debug", "body: %s", post_body["text"]);
 	message = msg({ to = bare_room, from = sender, type = "groupchat", id="webhookbot" .. now()},post_body["text"]);
-	--message:tag("id", "webhookbot" .. now());
 	dest_room:broadcast_message(message, true);
 	return 201;
 end
