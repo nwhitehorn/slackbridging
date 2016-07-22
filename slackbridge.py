@@ -11,8 +11,8 @@ import os, cgi, requests, json, sys
 # slackchannel2@conference.example.com on a Prosody server.
 
 links = {
-	'slackchannel1/mydomain': 'https://hooks.slack.com/services/foo/bar2'
-	'slackchannel1/myotherdomain': 'https://hooks.slack.com/services/foo2/bar1'
+	'slackchannel1/mydomain': 'https://hooks.slack.com/services/foo/bar2',
+	'slackchannel1/myotherdomain': 'https://hooks.slack.com/services/foo2/bar1',
 
 	'slackchannel2/conference.example.com': ('https://hooks.slack.com/services/incoming/hook', '#slackchannel2'),
 	'slackchannel2/mydomain': 'https://conference.example.com/webhook/slackchannel2',
