@@ -26,7 +26,7 @@ Component "conference.example.com" "muc"
 
 ## The reflector python script
 
-This is a hacked-together CGI script that receives outgoing Slack-style webhook messages, munges them slightly, and forwards them to the incoming webhook on another channel. Notably, it preserves both the user name and body test.
+This is a hacked-together CGI script that receives outgoing Slack-style webhook messages, munges them slightly, and forwards them to the incoming webhook on another channel in such a way that an exact equivalent to the original message appears there. Notably, it preserves both the user name and body text.
 
 This can be used to add an approximation of XMPP server-to-server federation to Slack. By binding the outgoing webhook of one channel to the incoming hook of another, hosted in a different domain, and then binding the reverse direction hooks as well, all messages from one chat will show up, properly attributed, in the other. This creates a reasonably high-quality illusion of a shared inter-domain Slack chat.
 
