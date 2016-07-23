@@ -4,6 +4,7 @@ Scripts for bridging Slack and Slack and Slack and XMPP. Lua module connects to 
 
 Config on the Prosody server:
 
+```lua
 Component "conference.example.com" "muc"
         outgoing_webhook_routing = {
                 ["slackchannel2"] = "http://mywebserver/cgi-bin/slackbridge.py",
@@ -13,5 +14,5 @@ Component "conference.example.com" "muc"
         modules_enabled = {
                 "slack_webhooks";
         }
-
+```
 
