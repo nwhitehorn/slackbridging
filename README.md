@@ -31,3 +31,11 @@ This is a hacked-together CGI script that receives outgoing Slack-style webhook 
 This can be used to add an approximation of XMPP server-to-server federation to Slack. By binding the outgoing webhook of one channel to the incoming hook of another, hosted in a different domain, and then binding the reverse direction hooks as well, all messages from one chat will show up, properly attributed, in the other. This creates a reasonably high-quality illusion of a shared inter-domain Slack chat.
 
 By using the Prosody module described above, one of these "Slack chats" can be a Prosody-hosted XMPP MUC, which lets Slack users participate in an open XMPP MUC room as (apparently) native inhabitants (and vice-versa for the XMPP users in the Slack chat).
+
+## Missing Features
+
+Some things don't work, either because they are unimplemented or the Slack webhook API does not support them:
+* The webhook reflector script does not convey presence information from one chat to another
+* No per-room or per-bot default posting names in MUCs (they all get either "Bot" or a username as specified in the POST)
+* No Slack attachments or other fancy features are implemented
+* Having the Python script be a CGI is not entirely optimal, though it works fine.
