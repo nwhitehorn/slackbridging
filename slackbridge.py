@@ -37,3 +37,5 @@ if chatname in links and 'bot_id' not in data: # Ignore missing chats and avoid 
 		url = links[chatname]
 	requests.post(url, json=message)
 
+sys.stdout.write('Status: 200 OK\r\n\r\n')
+
